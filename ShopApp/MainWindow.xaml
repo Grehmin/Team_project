@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShopApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="UsersDataGrid" AutoGenerateColumns="False" Margin="10">
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        <DataGrid x:Name="UsersDataGrid" AutoGenerateColumns="False" Margin="10" Visibility="Hidden">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="User ID" Binding="{Binding UserID}" Width="Auto" />
                 <DataGridTextColumn Header="Login" Binding="{Binding Login}" Width="*" />

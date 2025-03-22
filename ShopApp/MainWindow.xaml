@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <DataGrid x:Name="UsersDataGrid" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="User ID" Binding="{Binding UserID}" Width="Auto" />
+                <DataGridTextColumn Header="Login" Binding="{Binding Login}" Width="*" />
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*" />
+                <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="*" />
+                <DataGridTextColumn Header="Phone Number" Binding="{Binding PhoneNumber}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

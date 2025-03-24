@@ -47,6 +47,12 @@ public partial class MainWindow : Window {
             MainFrame.Navigate(cartPage);
             return;
         }
+        if (page is ProfilePage profilePage) {
+            profilePage.CurrentUser = User;
+            profilePage.Context = Context;
+            MainFrame.Navigate(profilePage);
+            return;
+        }
         throw new UnreachableException();
     }
 

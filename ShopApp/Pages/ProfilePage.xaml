@@ -87,8 +87,8 @@
                     </Border>
 
                     <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                        <TextBlock Text="Иванов Иван" FontSize="18" FontWeight="Bold"/>
-                        <TextBlock Text="ivanov@example.com" FontSize="12" Foreground="#FF666666"/>
+                        <TextBlock Text="{Binding CurrentUser.FullName}" FontSize="18" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding CurrentUser.Email}" FontSize="12" Foreground="#FF666666"/>
                         <Button x:Name="EditProfileButton" Content="Редактировать" 
                                 Width="100" Margin="0,6,0,0" HorizontalAlignment="Left"
                                 Click="EditProfileButton_Click" Padding="4"/>
@@ -99,7 +99,7 @@
             <!-- Детали аккаунта-->
             <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="12" Margin="0,0,0,8">
                 <StackPanel>
-                    <TextBlock Text="Account" FontSize="16" FontWeight="Bold" Margin="0,0,0,6"/>
+                    <TextBlock Text="Аккаунт" FontSize="16" FontWeight="Bold" Margin="0,0,0,6"/>
 
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -113,19 +113,19 @@
                         </Grid.RowDefinitions>
 
                         <TextBlock Grid.Row="0" Grid.Column="0" Text="Телефон:" FontWeight="SemiBold"/>
-                        <TextBlock Grid.Row="0" Grid.Column="1" Text="+7 (901) 123-45-67"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding CurrentUser.PhoneNumber}"/>
 
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="Адрес:" FontWeight="SemiBold" Margin="0,4,0,0"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" Text="Россия,Москва" Margin="0,4,0,0"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding CurrentUser.Address}" Margin="0,4,0,0"/>
 
                         <TextBlock Grid.Row="2" Grid.Column="0" Text="Дата регистрации: " FontWeight="SemiBold" Margin="0,4,0,0"/>
-                        <TextBlock Grid.Row="2" Grid.Column="1" Text="Март 2025" Margin="0,4,0,0"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding CurrentUser.CreatedAtUser}" Margin="0,4,0,0"/>
                     </Grid>
                 </StackPanel>
             </Border>
 
             <!-- Настройки-->
-            <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="12" Margin="0,115,0,21" Grid.RowSpan="3">
+            <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="12" Margin="0,115,0,21" Grid.RowSpan="3" Visibility="Hidden">
                 <StackPanel>
                     <TextBlock Text="Настройки" FontSize="16" FontWeight="Bold" Margin="0,0,0,6"/>
 

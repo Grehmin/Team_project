@@ -41,7 +41,7 @@ public partial class ItemBrowserPage : Page {
     }
 
     private void CartButton_Click(object sender, RoutedEventArgs e) => mainWindow.Navigate<CartPage>(GetUser(), GetContext());
-    private void ProfileButton_Click(object sender, RoutedEventArgs e) => mainWindow.Navigate<ProfilePage>();
+    private void ProfileButton_Click(object sender, RoutedEventArgs e) => mainWindow.Navigate<ProfilePage>(GetUser(), GetContext());
     private void AboutButton_Click(object sender, RoutedEventArgs e) => mainWindow.Navigate<AboutPage>();
 
     private async void AddToCart_Click(object sender, RoutedEventArgs e) {

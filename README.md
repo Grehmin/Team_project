@@ -16,8 +16,7 @@
 - **.NET SDK**: .NET Core 8.0
 - **Среда разработки**: Visual Studio 2022
 - **Пользовательский интерфейс**: Windows Presentation Foundation (WPF)
-- **База данных**: TODO(Алексей): пропиши тут какую бд выберешь: localdb,
-  sqlite, mysql, sql server
+- **База данных**: sqlite
 - **Связь базы данных**: EntityFrameworkCore
 
 ### Требования к приложению

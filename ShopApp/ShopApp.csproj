@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\college-logo.jpg" />
     <None Remove="Assets\default_product_image.jpeg" />
   </ItemGroup>
 
@@ -21,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\college-logo.jpg" />
     <Resource Include="Assets\default_product_image.jpeg" />
   </ItemGroup>
 

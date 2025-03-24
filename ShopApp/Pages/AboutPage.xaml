@@ -8,8 +8,36 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AboutPage">
 
-    <StackPanel Margin="200, 50">
-        <Button x:Name="BackButton" Content="Back" Click="BackButton_Click"/>
-        <TextBlock Text="This is the About page." FontSize="24"/>
-    </StackPanel>
+    <!-- Основной контейнер с выравниванием по центру -->
+    <Grid>
+        <StackPanel Margin="200,50,200,50">
+            <Button x:Name="BackButton" Content="Back" Click="BackButton_Click"/>
+            <!-- Информация о программе -->
+            <TextBlock Text="О программе:" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" RenderTransformOrigin="0.5,-1.247" HorizontalAlignment="Center"/>
+            <TextBlock Text="ShopApp - это простое приложение, предназначенное для продажи хлебобулочных изделий." 
+                       TextWrapping="Wrap" 
+                       HorizontalAlignment="Center" 
+                       TextAlignment="Center" 
+                       Margin="0,0,0,20"/>
+            <TextBlock Text="Версия: 1.0.0" FontStyle="Italic" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            <TextBlock Text="Разработчики приложения:" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
+
+            <!-- Информация о разработчиках -->
+            <StackPanel HorizontalAlignment="Center" Margin="0,0,0,20">
+                <!-- дописать необходимую информацию-->
+                <TextBlock Text="Сергей - TeamLead" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                <TextBlock Text="Даниил - Lead App Developer" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                <TextBlock Text="Алексей - App Developer, Database Architect" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                <TextBlock Text="ДОБАВИТЬ ОСТАЛЬНЫХ" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+            </StackPanel>
+        </StackPanel>
+        <!-- Изображение -->
+        <Image 
+            Source="pack://application:,,,/Assets/college-logo.jpg" 
+            Width="108" 
+            Height="120" 
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Top"
+            Margin="0,0,20,0" />
+    </Grid>
 </Page>

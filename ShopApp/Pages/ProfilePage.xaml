@@ -8,8 +8,137 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ProfilePage">
 
-    <StackPanel>
+
+
+    <!--<StackPanel>
         <Button x:Name="ItemBrowserButton" Content="Back to Item Browser" Click="ItemBrowserButton_Click"/>
         <Button x:Name="OrderHistoryButton" Content="Order History" Click="OrderHistoryButton_Click"/>
-    </StackPanel>
+    </StackPanel>-->
+    <!-- Ресурсы страницы (стили) -->
+    <Page.Resources>
+        <Style x:Key="NavButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF444444"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Padding" Value="8 4"/>
+            <Setter Property="Margin" Value="5 0"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="4"
+                                BorderThickness="0"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF555555"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#FF666666"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Компактная панель навигации -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="AliceBlue">
+            <Button x:Name="ItemBrowserButton" Content="Back to Item Browser" 
+                    Click="ItemBrowserButton_Click"
+                    Style="{StaticResource NavButtonStyle}"/>
+            <Button x:Name="OrderHistoryButton" Content="Order History" 
+                    Click="OrderHistoryButton_Click"
+                    Style="{StaticResource NavButtonStyle}" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <!-- Основное содержимое -->
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Информация о пользователе -->
+            <Border Grid.Row="0" Background="White" CornerRadius="8" Padding="12" Margin="0,0,0,8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Width="64" Height="64" CornerRadius="32" 
+                            Background="#FFDDDDDD" Margin="0,0,12,0">
+                        <Image Source="/Assets/Image.jpg" Stretch="Uniform"/>
+                    </Border>
+
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding CurrentUser.FullName}" FontSize="18" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding CurrentUser.Email}" FontSize="12" Foreground="#FF666666"/>
+                        <Button x:Name="EditProfileButton" Content="Редактировать" 
+                                Width="100" Margin="0,6,0,0" HorizontalAlignment="Left"
+                                Click="EditProfileButton_Click" Padding="4"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Детали аккаунта-->
+            <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="12" Margin="0,0,0,8">
+                <StackPanel>
+                    <TextBlock Text="Аккаунт" FontSize="16" FontWeight="Bold" Margin="0,0,0,6"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Телефон:" FontWeight="SemiBold"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding CurrentUser.PhoneNumber}"/>
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Адрес:" FontWeight="SemiBold" Margin="0,4,0,0"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding CurrentUser.Address}" Margin="0,4,0,0"/>
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Дата регистрации: " FontWeight="SemiBold" Margin="0,4,0,0"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding CurrentUser.CreatedAtUser}" Margin="0,4,0,0"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- Настройки-->
+            <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="12" Margin="0,115,0,21" Grid.RowSpan="3" Visibility="Hidden">
+                <StackPanel>
+                    <TextBlock Text="Настройки" FontSize="16" FontWeight="Bold" Margin="0,0,0,6"/>
+
+                    <CheckBox x:Name="EmailNotifications" Content="Оповещение по Email" IsChecked="True" Margin="0,2"/>
+                    <CheckBox x:Name="SmsNotifications" Content="Оповещение по SMS" IsChecked="False" Margin="0,2"/>
+                    <Button x:Name="SavePreferencesButton" Content="Сохранить" 
+                            Width="100" HorizontalAlignment="Left"
+                            Click="SavePreferencesButton_Click" Padding="4"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Пустое пространство внизу для баланса -->
+            <Border Grid.Row="3" Background="Transparent"/>
+        </Grid>
+    </Grid>
 </Page>

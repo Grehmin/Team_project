@@ -49,5 +49,6 @@ public class AppDbContext : DbContext {
             .HasOne(c => c.Product)
             .WithMany(p => p.Carts)
             .HasForeignKey(c => c.ProductId);
+        TestDataGenerator.Seed(modelBuilder);
     }
 }

@@ -31,8 +31,8 @@ public class AuthService {
             await context.Users.AddAsync(newUser);
             await context.SaveChangesAsync();
             return (true, newUser, null);
-        } catch (Exception ex) {
-            throw ex;
+        } catch (Exception) {
+            throw;
             //return (false, null, $"Registration failed: {ex.Message}");
         }
     }
@@ -47,8 +47,8 @@ public class AuthService {
                 return (false, null, "Invalid password");
             }
             return (true, user, null);
-        } catch (Exception ex) {
-            throw ex;
+        } catch (Exception) {
+            throw;
             //return (false, null, $"Login failed: {ex.Message}");
         }
     }

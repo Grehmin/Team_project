@@ -80,9 +80,9 @@ public class Product {
 
     [Required]
     [MaxLength(100)]
-    public string ProductName { get; set; } //Название продукта
+    public required string ProductName { get; set; } //Название продукта
 
-    public string ProductDescription { get; set; } //Описание продукта
+    public required string ProductDescription { get; set; } //Описание продукта
 
     [Required]
     [Column(TypeName = "decimal(10, 2)")]
@@ -91,8 +91,9 @@ public class Product {
     [Required]
     public int Quantity { get; set; } //Количество товара на складе
 
+    // Makarov: СТРОГО НАЗВАНИЕ ФАЙЛА. НЕ ПУТЬ - ТОЛЬКО НАЗВАНИЕ.
     [MaxLength(255)]
-    public string Image { get; set; } //Изображение продукта(если есть)
+    public string? Image { get; set; } //Изображение продукта(если есть)
 
     public DateTime CreatedAtProduct { get; set; } = DateTime.UtcNow; //Дата и время добавления продукта
 
@@ -107,24 +108,23 @@ public class User {
 
     [Required]
     [MaxLength(50)]
-    public string Login { get; set; } //Логин пользователя (уникальный)
-
+    public required string Login { get; set; } //Логин пользователя (уникальный)
     [Required]
     [MaxLength(255)]
-    public string Password { get; set; } //Пароль
-
+    public required string Password { get; set; } //Пароль
     [Required]
     [MaxLength(100)]
-    public string Email { get; set; } //Электронная почта пользователя (уникальная)
+    public required string Email { get; set; } //Электронная почта пользователя (уникальная)
+    [Required]
+    [MaxLength(20)]
+    public required string PhoneNumber { get; set; } //Номер телефона пользователя
 
     [MaxLength(100)]
     public string? FullName { get; set; } //Полное имя пользователя
 
     public string? Address { get; set; } //Адрес доставки
 
-    [Required]
-    [MaxLength(20)]
-    public string PhoneNumber { get; set; } //Номер телефона пользователя
+    public bool IsAdmin { get; set; }
 
     public DateTime CreatedAtUser { get; set; } = DateTime.UtcNow; //Дата и время регистрации пользователя
 

@@ -13,5 +13,4 @@ public partial class ProfilePage : Page {
 
     private void ItemBrowserButton_Click(object sender, System.Windows.RoutedEventArgs e) => mainWindow.Navigate<ItemBrowserPage>();
     private void OrderHistoryButton_Click(object sender, System.Windows.RoutedEventArgs e) => mainWindow.Navigate<OrderHistoryPage>();
-    private void CartButton_Click(object sender, System.Windows.RoutedEventArgs e) => mainWindow.Navigate<CartPage>();
 }

@@ -11,6 +11,5 @@
     <StackPanel>
         <Button x:Name="ItemBrowserButton" Content="Back to Item Browser" Click="ItemBrowserButton_Click"/>
         <Button x:Name="OrderHistoryButton" Content="Order History" Click="OrderHistoryButton_Click"/>
-        <Button x:Name="CartButton" Content="Cart" Click="CartButton_Click"/>
     </StackPanel>
 </Page>

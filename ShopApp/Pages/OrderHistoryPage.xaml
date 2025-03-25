@@ -8,7 +8,72 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="OrderHistoryPage">
 
-    <StackPanel>
-        <Button x:Name="ProfileButton" Content="Profile" Click="ProfileButton_Click"/>
-    </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Grid Grid.Row="0" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="История заказов" 
+                       FontSize="24" 
+                       FontWeight="Bold"
+                       VerticalAlignment="Center"/>
+
+            <!-- Кнопка "Профиль" -->
+            <Button Grid.Column="1"
+                    x:Name="ProfileButton" 
+                    Content="Профиль"
+                    MinWidth="120"
+                    Padding="10,5"
+                    FontWeight="SemiBold"
+                    Margin="5,0"
+                    Click="ProfileButton_Click"/>
+
+            <!-- Кнопка "Детали заказа" -->
+            <Button Grid.Column="2"
+                    Content="Детали заказа"
+                    MinWidth="120"
+                    Padding="10,5"                   
+                    FontWeight="SemiBold"
+                    Command="{Binding ViewDetailsCommand}"/>
+        </Grid>
+
+        <!-- Order List -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <ItemsControl x:Name="OrdersList" Margin="10" Height="378">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#DDD" BorderThickness="0,0,0,1" Padding="0,10" MinHeight="100">
+                            <StackPanel>
+                                <!-- Первая строка: номер заказа и дата -->
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                    <TextBlock Text="{Binding OrderNumber}" FontWeight="Bold" FontSize="16"/>
+                                    <TextBlock Text="{Binding OrderDate, StringFormat='dd MMM yyyy'}" Foreground="Gray"/>
+                                </StackPanel>
+                                <!-- Вторая строка: количество товаров и сумма -->
+                                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                    <TextBlock Text="{Binding ItemCount, StringFormat='{}{0} items'}"/>
+                                    <TextBlock Text=" • " Margin="5,0"/>
+                                    <TextBlock Text="{Binding TotalAmount, StringFormat='Total: {0:C}'}" FontWeight="Bold"/>
+                                </StackPanel>
+
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+        <!-- Empty state -->
+        <TextBlock Grid.Row="1" x:Name="EmptyMessage" Text="Вы еще не размещали никаких заказов." 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"
+                   Visibility="Collapsed"/>
+    </Grid>
 </Page>

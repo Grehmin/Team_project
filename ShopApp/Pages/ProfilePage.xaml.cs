@@ -13,4 +13,12 @@ public partial class ProfilePage : Page {
 
     private void ItemBrowserButton_Click(object sender, System.Windows.RoutedEventArgs e) => mainWindow.Navigate<ItemBrowserPage>();
     private void OrderHistoryButton_Click(object sender, System.Windows.RoutedEventArgs e) => mainWindow.Navigate<OrderHistoryPage>();
+
+    private void EditProfileButton_Click(object sender, System.Windows.RoutedEventArgs e) {
+
+    }
+
+    private void SavePreferencesButton_Click(object sender, System.Windows.RoutedEventArgs e) {
+
+    }
 }

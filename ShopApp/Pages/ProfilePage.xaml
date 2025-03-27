@@ -56,10 +56,10 @@
 
         <!-- Компактная панель навигации -->
         <StackPanel Grid.Row="0" Orientation="Horizontal" Background="AliceBlue">
-            <Button x:Name="ItemBrowserButton" Content="Back to Item Browser" 
+            <Button x:Name="ItemBrowserButton" Content="{DynamicResource Page_Profile_button_BackToItemBrowser}" 
                     Click="ItemBrowserButton_Click"
                     Style="{StaticResource NavButtonStyle}"/>
-            <Button x:Name="OrderHistoryButton" Content="Order History" 
+            <Button x:Name="OrderHistoryButton" Content="{DynamicResource Page_Profile_button_OrderHistory}" 
                     Click="OrderHistoryButton_Click"
                     Style="{StaticResource NavButtonStyle}" Margin="10,0,0,0"/>
         </StackPanel>
@@ -68,7 +68,8 @@
         <Grid Grid.Row="1" Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="16.334"/>
+                <RowDefinition Height="98.826"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
@@ -89,7 +90,7 @@
                     <StackPanel Grid.Column="1" VerticalAlignment="Center">
                         <TextBlock Text="{Binding CurrentUser.FullName}" FontSize="18" FontWeight="Bold"/>
                         <TextBlock Text="{Binding CurrentUser.Email}" FontSize="12" Foreground="#FF666666"/>
-                        <Button x:Name="EditProfileButton" Content="Редактировать" 
+                        <Button x:Name="EditProfileButton" Content="{DynamicResource Page_Profile_button_Edit}" 
                                 Width="100" Margin="0,6,0,0" HorizontalAlignment="Left"
                                 Click="EditProfileButton_Click" Padding="4"/>
                     </StackPanel>
@@ -97,9 +98,9 @@
             </Border>
 
             <!-- Детали аккаунта-->
-            <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="12" Margin="0,0,0,8">
+            <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="12" Margin="0,0,0,8" Grid.RowSpan="2">
                 <StackPanel>
-                    <TextBlock Text="Аккаунт" FontSize="16" FontWeight="Bold" Margin="0,0,0,6"/>
+                    <TextBlock Text="{DynamicResource Page_Profile_TextBlock_Account}" FontSize="16" FontWeight="Bold" Margin="0,0,0,6"/>
 
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -112,20 +113,20 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
 
-                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Телефон:" FontWeight="SemiBold"/>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{DynamicResource Page_Profile_TextBlock_Phone}" FontWeight="SemiBold"/>
                         <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding CurrentUser.PhoneNumber}"/>
 
-                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Адрес:" FontWeight="SemiBold" Margin="0,4,0,0"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="{DynamicResource Page_Profile_TextBlock_Address}" FontWeight="SemiBold" Margin="0,4,0,0"/>
                         <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding CurrentUser.Address}" Margin="0,4,0,0"/>
 
-                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Дата регистрации: " FontWeight="SemiBold" Margin="0,4,0,0"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="{DynamicResource Page_Profile_TextBlock_DateOfRegistration}" FontWeight="SemiBold" Margin="0,4,0,0"/>
                         <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding CurrentUser.CreatedAtUser}" Margin="0,4,0,0"/>
                     </Grid>
                 </StackPanel>
             </Border>
 
             <!-- Настройки-->
-            <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="12" Margin="0,115,0,21" Grid.RowSpan="3" Visibility="Hidden">
+            <Border Grid.Row="2" Background="White" CornerRadius="8" Padding="12" Margin="0,99,0,21" Grid.RowSpan="3" Visibility="Hidden">
                 <StackPanel>
                     <TextBlock Text="Настройки" FontSize="16" FontWeight="Bold" Margin="0,0,0,6"/>
 
@@ -138,7 +139,13 @@
             </Border>
 
             <!-- Пустое пространство внизу для баланса -->
-            <Border Grid.Row="3" Background="Transparent"/>
-        </Grid>
+            <Border Grid.Row="2" Background="Transparent" Margin="0,99,0,0" Grid.RowSpan="3"/>
+            <Border Grid.Row="3">
+                <Grid Margin="5" MaxWidth="100" VerticalAlignment="Top">
+                    <Label Grid.Column="1" x:Name="ChangeLang_RU" Content="RU" FontSize="16" HorizontalAlignment="Left" MouseLeftButtonDown="ChangeLang_RU_MouseLeftButtonDown"/>
+                    <Label Grid.Column="2" x:Name="ChangeLang_EN" Content="EN" FontSize="16" HorizontalAlignment="Right" MouseLeftButtonDown="ChangeLang_EN_MouseLeftButtonDown"/>
+                </Grid>
+            </Border>
+        </Grid>        
     </Grid>
 </Page>

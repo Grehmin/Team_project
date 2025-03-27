@@ -10,17 +10,21 @@
 
     <StackPanel>
         <!-- Input Form -->
-        <Label x:Name="LoginLabel" Content="Login" FontSize="16"/>
+        <Label x:Name="LoginLabel" Content="{DynamicResource Page_Authentication_label_Login}" FontSize="16"/>
         <TextBox x:Name="LoginTextBox"  />
-        <Label x:Name="PasswordLabel"  Content="Password" FontSize="16"/>
+        <Label x:Name="PasswordLabel"  Content="{DynamicResource Page_Authentication_label_Password}" FontSize="16"/>
         <TextBox x:Name="PasswordTextBox"  />
         <Label x:Name="EmailLabel"  Content="Email" FontSize="16" Visibility="Collapsed"/>
         <TextBox x:Name="EmailTextBox" Visibility="Collapsed" />
         <Label x:Name="PhoneLabel"  Content="Phone" FontSize="16" Visibility="Collapsed"/>
         <TextBox x:Name="PhoneTextBox"  Visibility="Collapsed"/>
         <!--Buttons-->
-        <Button x:Name="SignInButton" Grid.Row="4" Content="Sign In" Click="SignInButton_Click"/>
-        <Button x:Name="SignUpButton" Grid.Row="5" Content="Sign Up" Click="SignUpButton_Click"/>
-        <TextBlock x:Name="HintTextBlock" Grid.Row="6" Height="100" TextWrapping="WrapWithOverflow"/>
+        <Button x:Name="SignInButton" Grid.Row="4" Content="{DynamicResource Page_Authentication_button_SignIn}" Click="SignInButton_Click"/>
+        <Button x:Name="SignUpButton" Grid.Row="5" Content="{DynamicResource Page_Authentication_button_SignUp}" Click="SignUpButton_Click"/>
+        <TextBlock x:Name="HintTextBlock" Grid.Row="6" Height="100" TextWrapping="WrapWithOverflow"/>        
+        <Grid Margin="5" MaxWidth="100" VerticalAlignment="Bottom">                
+            <Label Grid.Column="1" x:Name="ChangeLang_RU" Content="RU" FontSize="16" HorizontalAlignment="Left" MouseLeftButtonDown="ChangeLang_RU_MouseLeftButtonDown"/>
+            <Label Grid.Column="2" x:Name="ChangeLang_EN" Content="EN" FontSize="16" HorizontalAlignment="Right" MouseLeftButtonDown="ChangeLang_EN_MouseLeftButtonDown"/>
+        </Grid>        
     </StackPanel>
 </Page>

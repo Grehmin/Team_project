@@ -27,10 +27,10 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="AboutButton" Grid.Column="0" Content="About" Click="AboutButton_Click" />
-                <Button x:Name="AddNewProductButton" Grid.Column="2" Content="New Product (Admin)" Click="AddNewProductButton_Click" Visibility="Hidden"/>
-                <Button x:Name="CartButton" Grid.Column="3" Content="Cart" Click="CartButton_Click" />
-                <Button x:Name="ProfileButton" Grid.Column="4" Content="Profile" Click="ProfileButton_Click"/>
+                <Button x:Name="AboutButton" Grid.Column="0" Content="{DynamicResource Page_ItemBrowser_button_About}" Click="AboutButton_Click" />
+                <Button x:Name="AddNewProductButton" Grid.Column="2" Content="{DynamicResource Page_ItemBrowser_button_NewProduct}" Click="AddNewProductButton_Click" Visibility="Hidden"/>
+                <Button x:Name="CartButton" Grid.Column="3" Content="{DynamicResource Page_ItemBrowser_button_Cart}" Click="CartButton_Click" />
+                <Button x:Name="ProfileButton" Grid.Column="4" Content="{DynamicResource Page_ItemBrowser_button_Profile}" Click="ProfileButton_Click"/>
             </Grid>
         </Border>
         <!-- Item Display -->
@@ -98,7 +98,7 @@
                                            Margin="0,0,0,10"/>
 
                                 <!-- Add to Cart Button -->
-                                <Button Content="Add to Cart" 
+                                <Button Content="{DynamicResource Page_ItemBrowser_button_AddToCart}" 
                                         Padding="10,5"
                                         Background="#007ACC"
                                         Foreground="White"

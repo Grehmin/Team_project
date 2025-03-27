@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="Page_Authentication_button_SignIn">Sign In</system:String>
+    <system:String x:Key="Page_Authentication_button_SignUp">Sign Up</system:String>
+    <system:String x:Key="Page_Authentication_label_Login">Login</system:String>
+    <system:String x:Key="Page_Authentication_label_Password">Password</system:String>    
+    <system:String x:Key="Page_About_button_Back">Back</system:String>
+    <system:String x:Key="Page_About_TextBlock_About">About:</system:String>
+    <system:String x:Key="Page_About_TextBlock_AboutDescription">ShopApp is a simple app designed for selling bakery products.</system:String>
+    <system:String x:Key="Page_About_TextBlock_Version">Version: 1.0.0</system:String>
+    <system:String x:Key="Page_About_TextBlock_ApplicationDevelopers">Application developers:</system:String>
+    <system:String x:Key="Page_About_TextBlock_AddAnother">Add another</system:String>
+    <system:String x:Key="Page_Cart_button_ItemBrowser">Item Browser</system:String>
+    <system:String x:Key="Page_Cart_button_Profile">Profile</system:String>
+    <system:String x:Key="Page_Cart_Column_Product">Product</system:String>
+    <system:String x:Key="Page_Cart_Column_Price">Price</system:String>
+    <system:String x:Key="Page_Cart_Column_Quantity">Quantity</system:String>    
+    <system:String x:Key="Page_ItemBrowser_button_About">About</system:String>
+    <system:String x:Key="Page_ItemBrowser_button_Cart">Cart</system:String>
+    <system:String x:Key="Page_ItemBrowser_button_Profile">Profile</system:String>
+    <system:String x:Key="Page_ItemBrowser_button_NewProduct">New Product (Admin)</system:String>
+    <system:String x:Key="Page_ItemBrowser_button_AddToCart">Add to Cart</system:String>
+    <system:String x:Key="Page_OrderHistory_button_Profile">Profile</system:String>
+    <system:String x:Key="Page_OrderHistory_button_OrderDetails">Order details</system:String>
+    <system:String x:Key="Page_OrderHistory_TextBlock_OrderHistory">Order history</system:String>
+    <system:String x:Key="Page_ProductEditor_button_Browse">Browse...</system:String>
+    <system:String x:Key="Page_ProductEditor_button_Save">Save</system:String>
+    <system:String x:Key="Page_ProductEditor_button_Cancel">Cancel</system:String>
+    <system:String x:Key="Page_ProductEditor_TextBlock_ProductName">Product Name:</system:String>
+    <system:String x:Key="Page_ProductEditor_TextBlock_Description">Description:</system:String>
+    <system:String x:Key="Page_ProductEditor_TextBlock_Price">Price:</system:String>
+    <system:String x:Key="Page_ProductEditor_TextBlock_Quantity">Quantity:</system:String>
+    <system:String x:Key="Page_ProductEditor_TextBlock_ImagePath">Image Path:</system:String>
+    <system:String x:Key="Page_Profile_button_BackToItemBrowser">Back to Item Browser</system:String>
+    <system:String x:Key="Page_Profile_button_OrderHistory">Order History</system:String>
+    <system:String x:Key="Page_Profile_button_Edit">Edit</system:String>
+    <system:String x:Key="Page_Profile_TextBlock_Account">Account</system:String>
+    <system:String x:Key="Page_Profile_TextBlock_Phone">Phone:</system:String>
+    <system:String x:Key="Page_Profile_TextBlock_Address">Address:</system:String>
+    <system:String x:Key="Page_Profile_TextBlock_DateOfRegistration">Date of registration:</system:String>    
+
+</ResourceDictionary>

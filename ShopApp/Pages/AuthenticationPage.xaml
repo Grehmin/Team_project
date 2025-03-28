@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="160"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Border Grid.Column="1" Grid.Row="1" Background="#f5f5dc" CornerRadius="15" BorderBrush="Black" BorderThickness="1">
@@ -26,20 +26,20 @@
                 <Label x:Name="PasswordLabel"  Content="{DynamicResource Page_Authentication_label_Password}" FontSize="16"/>
                 <TextBox Style="{DynamicResource RoundTextBoxStyle}" x:Name="PasswordTextBox" Margin="5,0,5,0" BorderBrush="Black"/>
                 <Label x:Name="EmailLabel"  Content="Email" FontSize="16" Visibility="Collapsed"/>
-                <TextBox x:Name="EmailTextBox" Visibility="Collapsed" />
-                <Label x:Name="PhoneLabel"  Content="Phone" FontSize="16" Visibility="Collapsed"/>
-                <TextBox x:Name="PhoneTextBox"  Visibility="Collapsed"/>
+                <TextBox Style="{StaticResource RoundTextBoxStyle}" x:Name="EmailTextBox" Visibility="Collapsed" />
+                <Label  x:Name="PhoneLabel"  Content="Phone" FontSize="16" Visibility="Collapsed"/>
+                <TextBox Style="{StaticResource RoundTextBoxStyle}" x:Name="PhoneTextBox"  Visibility="Collapsed"/>
                 <!--Buttons-->
                 <WrapPanel Margin="15">
                     <Button x:Name="SignInButton" Style="{DynamicResource RoundSquareButtonStyle2}" Margin="25,0,15,0" BorderBrush="Black" Background="#4C2F27" Width="100" Height="27" Content="Sign In" Click="SignInButton_Click" Foreground="White" BorderThickness="0"/>
                     <Button x:Name="SignUpButton" Style="{DynamicResource RoundSquareButtonStyle2}" Content="Sign Up" Width="100" BorderBrush="Black" Background="#4C2F27" Click="SignUpButton_Click" Foreground="White" BorderThickness="0"/>
                 </WrapPanel>
                 
-                <TextBlock x:Name="HintTextBlock" Height="100" TextWrapping="WrapWithOverflow"/>
-                <Grid Margin="5" MaxWidth="100" VerticalAlignment="Bottom">                
+                <Grid Margin="5" MaxWidth="100" VerticalAlignment="Bottom" Height="100" >                
                   <Label Grid.Column="1" x:Name="ChangeLang_RU" Content="RU" FontSize="16" HorizontalAlignment="Left" MouseLeftButtonDown="ChangeLang_RU_MouseLeftButtonDown"/>
                   <Label Grid.Column="2" x:Name="ChangeLang_EN" Content="EN" FontSize="16" HorizontalAlignment="Right" MouseLeftButtonDown="ChangeLang_EN_MouseLeftButtonDown"/>
                 </Grid> 
+                <TextBlock x:Name="HintTextBlock" Height="100" TextWrapping="WrapWithOverflow"/>
             </StackPanel>
         </Border>  
     </Grid>

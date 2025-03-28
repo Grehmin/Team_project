@@ -11,7 +11,7 @@
     <!-- Основной контейнер с выравниванием по центру -->
     <Border Margin="50,0" Background="#f5f5dc">
         <StackPanel>
-            <Button x:Name="BackButton" Style="{StaticResource RoundButtonStyle}" Content="{DynamicResource Page_About_button_Back}" Click="BackButton_Click" Background="#4C2F27" HorizontalAlignment="Left" Height="30" Width="31" Foreground="White" BorderThickness="0"/>
+            <Button x:Name="BackButton" Style="{StaticResource RoundButtonStyle}" Content="{DynamicResource Page_About_button_Back}" Click="BackButton_Click" Background="#4C2F27" HorizontalAlignment="Left" Height="30" MinWidth="31" Foreground="White" BorderThickness="0"/>
             <!-- Информация о программе -->
             <TextBlock Text="{DynamicResource Page_About_TextBlock_About}" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" RenderTransformOrigin="0.5,-1.247" HorizontalAlignment="Center"/>
             <TextBlock Text="{DynamicResource Page_About_TextBlock_AboutDescription}" 

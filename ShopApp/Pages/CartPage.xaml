@@ -20,17 +20,17 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="1" x:Name="ItemBrowserButton" Content="Item Browser" Click="ItemBrowserButton_Click"/>
-                <Button Grid.Column="2" x:Name="ProfileButton" Content="Profile" Click="ProfileButton_Click"/>
+                <Button Grid.Column="1" x:Name="ItemBrowserButton" Content="{DynamicResource Page_Cart_button_ItemBrowser}" Click="ItemBrowserButton_Click"/>
+                <Button Grid.Column="2" x:Name="ProfileButton" Content="{DynamicResource Page_Cart_button_Profile}" Click="ProfileButton_Click"/>
 
             </Grid>
         </Border>
         <ListView x:Name="CartItemsView" Grid.Row="1" ItemsSource="{Binding CartItems}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Product" Width="200" DisplayMemberBinding="{Binding Product.ProductName}"/>
-                    <GridViewColumn Header="Price" Width="100" DisplayMemberBinding="{Binding Product.Price, StringFormat={}{0:C2}}"/>
-                    <GridViewColumn Header="Quantity" Width="100" DisplayMemberBinding="{Binding Quantity}"/>
+                    <GridViewColumn Header="{DynamicResource Page_Cart_Column_Product}" Width="200" DisplayMemberBinding="{Binding Product.ProductName}"/>
+                    <GridViewColumn Header="{DynamicResource Page_Cart_Column_Price}" Width="100" DisplayMemberBinding="{Binding Product.Price, StringFormat={}{0:C2}}"/>
+                    <GridViewColumn Header="{DynamicResource Page_Cart_Column_Quantity}" Width="100" DisplayMemberBinding="{Binding Quantity}"/>
                 </GridView>
             </ListView.View>
         </ListView>

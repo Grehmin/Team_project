@@ -12,33 +12,33 @@
     <StackPanel Margin="20">
 
         <!-- Product Name -->
-        <TextBlock Grid.Row="0" Text="Product Name:"/>
+        <TextBlock Grid.Row="0" Text="{DynamicResource Page_ProductEditor_TextBlock_ProductName}"/>
         <TextBox x:Name="txtName" Grid.Row="1" Margin="0,0,0,10"/>
 
         <!-- Description -->
-        <TextBlock Grid.Row="2" Text="Description:"/>
+        <TextBlock Grid.Row="2" Text="{DynamicResource Page_ProductEditor_TextBlock_Description}"/>
         <TextBox x:Name="txtDescription" Grid.Row="3" Margin="0,0,0,10" 
                  AcceptsReturn="True" TextWrapping="Wrap" Height="60"/>
 
         <!-- Price -->
-        <TextBlock Grid.Row="4" Text="Price:"/>
+        <TextBlock Grid.Row="4" Text="{DynamicResource Page_ProductEditor_TextBlock_Price}"/>
         <TextBox x:Name="txtPrice" Grid.Row="5" Margin="0,0,0,10"/>
 
         <!-- Quantity -->
-        <TextBlock Grid.Row="6" Text="Quantity:"/>
+        <TextBlock Grid.Row="6" Text="{DynamicResource Page_ProductEditor_TextBlock_Quantity}"/>
         <TextBox x:Name="txtQuantity" Grid.Row="7" Margin="0,0,0,10"/>
 
         <!-- Image Path -->
-        <TextBlock Text="Image Path:"/>
+        <TextBlock Text="{DynamicResource Page_ProductEditor_TextBlock_ImagePath}"/>
         <StackPanel  Orientation="Horizontal">
             <TextBox x:Name="txtImage" Width="300" Margin="0,0,10,10"/>
-            <Button Content="Browse..." Click="BrowseImage_Click" Padding="10,5"/>
+            <Button Content="{DynamicResource Page_ProductEditor_button_Browse}" Click="BrowseImage_Click" Padding="10,5"/>
         </StackPanel>
 
         <!-- Buttons -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Save" Click="Save_Click" Margin="0,0,10,0" Padding="20,5"/>
-            <Button Content="Cancel" Click="Cancel_Click" Padding="20,5"/>
+            <Button Content="{DynamicResource Page_ProductEditor_button_Save}" Click="Save_Click" Margin="0,0,10,0" Padding="20,5"/>
+            <Button Content="{DynamicResource Page_ProductEditor_button_Cancel}" Click="Cancel_Click" Padding="20,5"/>
         </StackPanel>
     </StackPanel>
 </Page>

@@ -45,14 +45,14 @@
                 <Button x:Name="CartButton" Style="{DynamicResource RoundButtonStyle}" Grid.Column="3" 
                         Content="{DynamicResource Page_ItemBrowser_button_Cart}" 
                         Click="CartButton_Click" 
-                        Width="36" Margin="5,0,5,0" 
+                        MinWidth="36" Margin="5,0,5,0" 
                         BorderThickness="0" 
                         Background="#f5f5dc" 
                         Foreground="#4C2F27"/>
                 <Button x:Name="ProfileButton" Style="{DynamicResource RoundButtonStyle}" Grid.Column="4" 
                         Content="{DynamicResource Page_ItemBrowser_button_Profile}" 
                         Click="ProfileButton_Click" 
-                        Width="36" Margin="5,0,5,0" 
+                        MinWidth="36" Margin="5,0,5,0" 
                         BorderThickness="0" 
                         Background="#f5f5dc" 
                         Foreground="#4C2F27"/>

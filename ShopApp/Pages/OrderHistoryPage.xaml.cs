@@ -13,4 +13,7 @@ public partial class OrderHistoryPage : Page {
     }
 
     private void ProfileButton_Click(object sender, RoutedEventArgs e) => mainWindow.Navigate<ProfilePage>();
+
+    private void Page_Loaded(object sender, RoutedEventArgs e) {
+    }
 }

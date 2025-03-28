@@ -39,8 +39,7 @@ public partial class CartPage : Page {
     }
 
 
-
     private void ItemBrowserButton_Click(object sender, System.Windows.RoutedEventArgs e) => mainWindow.Navigate<ItemBrowserPage>();
-    private void ProfileButton_Click(object sender, System.Windows.RoutedEventArgs e) => mainWindow.Navigate<ProfilePage>();
+    private void ProfileButton_Click(object sender, System.Windows.RoutedEventArgs e) => mainWindow.Navigate<ProfilePage>(GetUser(), GetContext());
 
 }

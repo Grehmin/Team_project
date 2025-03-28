@@ -11,33 +11,33 @@
     <StackPanel Margin="20">
 
         <!-- Product Name -->
-        <TextBlock Grid.Row="0" Text="Product Name:"/>
+        <TextBlock Grid.Row="0" Text="{DynamicResource Page_ProductEditor_TextBlock_ProductName}"/>
         <TextBox x:Name="txtName" Style="{DynamicResource RoundTextBoxStyle}" Grid.Row="1" Margin="0,0,0,10"/>
 
         <!-- Description -->
-        <TextBlock Grid.Row="2" Text="Description:"/>
+        <TextBlock Grid.Row="2" Text="{DynamicResource Page_ProductEditor_TextBlock_Description}"/>
         <TextBox x:Name="txtDescription" Grid.Row="3" Margin="0,0,0,10" Style="{DynamicResource RoundTextBoxStyle}"
                  AcceptsReturn="True" TextWrapping="Wrap" Height="60"/>
 
         <!-- Price -->
-        <TextBlock Grid.Row="4" Text="Price:"/>
+        <TextBlock Grid.Row="4" Text="{DynamicResource Page_ProductEditor_TextBlock_Price}"/>
         <TextBox x:Name="txtPrice" Style="{DynamicResource RoundTextBoxStyle}" Grid.Row="5" Margin="0,0,0,10"/>
 
         <!-- Quantity -->
-        <TextBlock Grid.Row="6" Text="Quantity:"/>
+        <TextBlock Grid.Row="6" Text="{DynamicResource Page_ProductEditor_TextBlock_Quantity}"/>
         <TextBox x:Name="txtQuantity" Style="{DynamicResource RoundTextBoxStyle}" Grid.Row="7" Margin="0,0,0,10"/>
 
         <!-- Image Path -->
-        <TextBlock Text="Image Path:"/>
+        <TextBlock Text="{DynamicResource Page_ProductEditor_TextBlock_ImagePath}"/>
         <StackPanel  Orientation="Horizontal">
             <TextBox x:Name="txtImage" Style="{DynamicResource RoundTextBoxStyle}" Width="300" Margin="0,0,10,10"/>
-            <Button Style="{DynamicResource RoundSquareButtonStyle2}" BorderBrush="Black" Background="#4C2F27" Foreground="White" Content="Browse..."  Click="BrowseImage_Click" Padding="10,5"/>
+            <Button Style="{DynamicResource RoundSquareButtonStyle2}" BorderBrush="Black" Background="#4C2F27" Foreground="White" Content="{DynamicResource Page_ProductEditor_button_Browse}"  Click="BrowseImage_Click" Padding="10,5"/>
         </StackPanel>
 
         <!-- Buttons -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Save" Style="{DynamicResource RoundSquareButtonStyle2}" BorderBrush="Black" Background="#4C2F27" Foreground="White" Click="Save_Click" Margin="0,0,10,0" Padding="20,5"/>
-            <Button Content="Cancel" Style="{DynamicResource RoundSquareButtonStyle2}" BorderBrush="Black" Background="#4C2F27" Foreground="White" Click="Cancel_Click" Padding="20,5"/>
+            <Button Content="{DynamicResource Page_ProductEditor_button_Save}" Style="{DynamicResource RoundSquareButtonStyle2}" BorderBrush="Black" Background="#4C2F27" Foreground="White" Click="Save_Click" Margin="0,0,10,0" Padding="20,5"/>
+            <Button Content="{DynamicResource Page_ProductEditor_button_Cancel}" Style="{DynamicResource RoundSquareButtonStyle2}" BorderBrush="Black" Background="#4C2F27" Foreground="White" Click="Cancel_Click" Padding="20,5"/>
         </StackPanel>
     </StackPanel>
 </Page>

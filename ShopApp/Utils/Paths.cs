@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Windows;
 
 namespace ShopApp.Utils;
 
@@ -9,6 +10,11 @@ public static class Paths {
     public static string AppDatabase => Path.Combine([AppDocuments, "Database.sqlite"]);
 
     public static string ToImage(string image) => Path.Combine([AppImages, image]);
+
+    public static string GetString(string xkey) {
+        var str = Application.Current.FindResource(xkey) as string;
+        return $"{str}";
+    }
 
     // raises an exception if not recoverable
     public static void EnsureExists() {

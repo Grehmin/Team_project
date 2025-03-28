@@ -39,18 +39,18 @@
                         BorderThickness="0" 
                         Foreground="#4C2F27" 
                         Grid.Column="2" Margin="5,0,5,0" 
-                        Content="New Product (Admin)" 
+                        Content="{DynamicResource Page_ItemBrowser_button_NewProduct}" 
                         Click="AddNewProductButton_Click" 
                         Visibility="Hidden"/>
                 <Button x:Name="CartButton" Style="{DynamicResource RoundButtonStyle}" Grid.Column="3" 
-                        Content="Cart" 
+                        Content="{DynamicResource Page_ItemBrowser_button_Cart}" 
                         Click="CartButton_Click" 
                         Width="36" Margin="5,0,5,0" 
                         BorderThickness="0" 
                         Background="#f5f5dc" 
                         Foreground="#4C2F27"/>
                 <Button x:Name="ProfileButton" Style="{DynamicResource RoundButtonStyle}" Grid.Column="4" 
-                        Content="Prof" 
+                        Content="{DynamicResource Page_ItemBrowser_button_Profile}" 
                         Click="ProfileButton_Click" 
                         Width="36" Margin="5,0,5,0" 
                         BorderThickness="0" 
@@ -124,7 +124,7 @@
                                            Margin="0,0,0,10"/>
 
                                 <!-- Add to Cart Button -->
-                                <Button Content="Add to Cart"
+                                <Button Content="{DynamicResource Page_ItemBrowser_button_AddToCart}"
                                         Style="{DynamicResource RoundSquareButton}"
                                         Padding="10,5"
                                         Background="#4C2F27"
@@ -138,7 +138,5 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
-
-
     </Grid>
 </Page>

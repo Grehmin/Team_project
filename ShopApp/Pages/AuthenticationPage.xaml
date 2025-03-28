@@ -7,7 +7,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Authentication" Loaded="Page_Loaded">
-
     <Grid Background="#755C48">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -22,9 +21,9 @@
         <Border Grid.Column="1" Grid.Row="1" Background="#f5f5dc" CornerRadius="15" BorderBrush="Black" BorderThickness="1">
             <StackPanel>
                 <!-- Input Form -->
-                <Label x:Name="LoginLabel" Content="Login" FontSize="16"/>
+                <Label x:Name="LoginLabel" Content="{DynamicResource Page_Authentication_label_Login}" FontSize="16"/>
                 <TextBox Style="{DynamicResource RoundTextBoxStyle}" x:Name="LoginTextBox" Margin="5,0,5,0" BorderBrush="Black"/>
-                <Label x:Name="PasswordLabel"  Content="Password" FontSize="16"/>
+                <Label x:Name="PasswordLabel"  Content="{DynamicResource Page_Authentication_label_Password}" FontSize="16"/>
                 <TextBox Style="{DynamicResource RoundTextBoxStyle}" x:Name="PasswordTextBox" Margin="5,0,5,0" BorderBrush="Black"/>
                 <Label x:Name="EmailLabel"  Content="Email" FontSize="16" Visibility="Collapsed"/>
                 <TextBox x:Name="EmailTextBox" Visibility="Collapsed" />
@@ -37,8 +36,11 @@
                 </WrapPanel>
                 
                 <TextBlock x:Name="HintTextBlock" Height="100" TextWrapping="WrapWithOverflow"/>
+                <Grid Margin="5" MaxWidth="100" VerticalAlignment="Bottom">                
+                  <Label Grid.Column="1" x:Name="ChangeLang_RU" Content="RU" FontSize="16" HorizontalAlignment="Left" MouseLeftButtonDown="ChangeLang_RU_MouseLeftButtonDown"/>
+                  <Label Grid.Column="2" x:Name="ChangeLang_EN" Content="EN" FontSize="16" HorizontalAlignment="Right" MouseLeftButtonDown="ChangeLang_EN_MouseLeftButtonDown"/>
+                </Grid> 
             </StackPanel>
-        </Border>
-       
+        </Border>  
     </Grid>
 </Page>

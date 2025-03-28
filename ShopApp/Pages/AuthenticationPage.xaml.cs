@@ -41,33 +41,33 @@ public partial class AuthenticationPage : Page {
 
     private async void SignInButton_Click(object sender, RoutedEventArgs e) {
         if (SwitchInputMode(FormInputMode.SignIn)) return; // change ui
-        HintTextBlock.Text = "Authenticating...";
+        HintTextBlock.Text = Paths.GetString("Page_Authentication_Hint_Login_OngoingAction");
         string login = LoginTextBox.Text;
         string password = PasswordTextBox.Text;
         var ret = await LoginAsync(login, password);
         if (ret.Success) {
-            HintTextBlock.Text = "Auth success";
+            HintTextBlock.Text = Paths.GetString("Page_Authentication_Hint_Login_Successful");
             if (ret.User == null) throw new Exception("User is null after successfull auth");
             mainWindow.Navigate<ItemBrowserPage>(ret.User);
         } else {
-            HintTextBlock.Text = $"Got error: {ret.Error}";
+            HintTextBlock.Text = ret.Error;
         }
     }
 
     private async void SignUpButton_Click(object sender, RoutedEventArgs e) {
         if (SwitchInputMode(FormInputMode.SignUp)) return; // change ui
-        HintTextBlock.Text = "Registering...";
+        HintTextBlock.Text = Paths.GetString("Page_Authentication_Hint_Register_OngoingAction");
         string login = LoginTextBox.Text;
         string password = PasswordTextBox.Text;
         string email = EmailTextBox.Text;
         string phone = PhoneTextBox.Text;
         var ret = await RegisterAsync(login, password, email, phone);
         if (ret.Success) {
-            HintTextBlock.Text = "Registration successful";
+            HintTextBlock.Text = Paths.GetString("Page_Authentication_Hint_Register_Successful");
             if (ret.User == null) throw new Exception("User is null after successfull auth");
             mainWindow.Navigate<ItemBrowserPage>(ret.User);
         } else {
-            HintTextBlock.Text = $"Got error: {ret.Error}";
+            HintTextBlock.Text = ret.Error;
         }
     }
 
@@ -79,9 +79,9 @@ public partial class AuthenticationPage : Page {
         string? fullName = null,
         string? address = null) {
         try {
-            if (context == null) { return (false, null, "Database is still loading, try again later"); }
+            if (context == null) { return (false, null, Paths.GetString("Page_Authentication_Hint_DatabaseIsLate")); }
             if (await context.Users.AnyAsync(u => u.Login == login || u.Email == email)) {
-                return (false, null, "User with this login or email already exists");
+                return (false, null, Paths.GetString("Page_Authentication_Hint_UserExists"));
             }
             var newUser = new User {
                 Login = login,
@@ -102,13 +102,13 @@ public partial class AuthenticationPage : Page {
 
     public async Task<(bool Success, User? User, string? Error)> LoginAsync(string loginOrEmail, string password) {
         try {
-            if (context == null) { return (false, null, "Database is still loading, try again later"); }
+            if (context == null) { return (false, null, Paths.GetString("Page_Authentication_Hint_DatabaseIsLate")); }
             var user = await context.Users.FirstOrDefaultAsync(u => u.Login == loginOrEmail || u.Email == loginOrEmail);
             if (user == null) {
-                return (false, null, "User not found");
+                return (false, null, Paths.GetString("Page_Authentication_Hint_UserNotExists"));
             }
             if (!user.Password.Equals(password)) {
-                return (false, null, "Invalid password");
+                return (false, null, Paths.GetString("Page_Authentication_Hint_UserNotExists"));
             }
             return (true, user, null);
         } catch (Exception) {
@@ -122,28 +122,24 @@ public partial class AuthenticationPage : Page {
         SignUp,
     }
 
-    private void ChangeLang_RU_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-    {
+    private void ChangeLang_RU_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e) {
         ResourceDictionary dict = new ResourceDictionary();
         dict.Source = new Uri("..\\Assets\\Dictionary-ru-RU.xaml", UriKind.Relative);
 
         RefreshLang(dict);
     }
 
-    private void ChangeLang_EN_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-    {
+    private void ChangeLang_EN_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e) {
         ResourceDictionary dict = new ResourceDictionary();
         dict.Source = new Uri("..\\Assets\\Dictionary-en-US.xaml", UriKind.Relative);
 
         RefreshLang(dict);
     }
 
-    private void RefreshLang(ResourceDictionary _dict)
-    {        
+    private void RefreshLang(ResourceDictionary _dict) {
         var oldDict = Application.Current.Resources.MergedDictionaries.FirstOrDefault(d => d.Source != null && d.Source.OriginalString.StartsWith("/Assets/Dictionary"));
 
-        if (oldDict != null)
-        {
+        if (oldDict != null) {
             Application.Current.Resources.MergedDictionaries.Remove(oldDict);
         }
 

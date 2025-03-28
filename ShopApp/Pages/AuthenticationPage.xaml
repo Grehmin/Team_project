@@ -8,19 +8,37 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Authentication" Loaded="Page_Loaded">
 
-    <StackPanel>
-        <!-- Input Form -->
-        <Label x:Name="LoginLabel" Content="Login" FontSize="16"/>
-        <TextBox x:Name="LoginTextBox"  />
-        <Label x:Name="PasswordLabel"  Content="Password" FontSize="16"/>
-        <TextBox x:Name="PasswordTextBox"  />
-        <Label x:Name="EmailLabel"  Content="Email" FontSize="16" Visibility="Collapsed"/>
-        <TextBox x:Name="EmailTextBox" Visibility="Collapsed" />
-        <Label x:Name="PhoneLabel"  Content="Phone" FontSize="16" Visibility="Collapsed"/>
-        <TextBox x:Name="PhoneTextBox"  Visibility="Collapsed"/>
-        <!--Buttons-->
-        <Button x:Name="SignInButton" Grid.Row="4" Content="Sign In" Click="SignInButton_Click"/>
-        <Button x:Name="SignUpButton" Grid.Row="5" Content="Sign Up" Click="SignUpButton_Click"/>
-        <TextBlock x:Name="HintTextBlock" Grid.Row="6" Height="100" TextWrapping="WrapWithOverflow"/>
-    </StackPanel>
+    <Grid Background="#755C48">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="160"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="1" Grid.Row="1" Background="#f5f5dc" CornerRadius="15" BorderBrush="Black" BorderThickness="1">
+            <StackPanel>
+                <!-- Input Form -->
+                <Label x:Name="LoginLabel" Content="Login" FontSize="16"/>
+                <TextBox Style="{DynamicResource RoundTextBoxStyle}" x:Name="LoginTextBox" Margin="5,0,5,0" BorderBrush="Black"/>
+                <Label x:Name="PasswordLabel"  Content="Password" FontSize="16"/>
+                <TextBox Style="{DynamicResource RoundTextBoxStyle}" x:Name="PasswordTextBox" Margin="5,0,5,0" BorderBrush="Black"/>
+                <Label x:Name="EmailLabel"  Content="Email" FontSize="16" Visibility="Collapsed"/>
+                <TextBox x:Name="EmailTextBox" Visibility="Collapsed" />
+                <Label x:Name="PhoneLabel"  Content="Phone" FontSize="16" Visibility="Collapsed"/>
+                <TextBox x:Name="PhoneTextBox"  Visibility="Collapsed"/>
+                <!--Buttons-->
+                <WrapPanel Margin="15">
+                    <Button x:Name="SignInButton" Style="{DynamicResource RoundSquareButtonStyle2}" Margin="25,0,15,0" BorderBrush="Black" Background="#4C2F27" Width="100" Height="27" Content="Sign In" Click="SignInButton_Click" Foreground="White" BorderThickness="0"/>
+                    <Button x:Name="SignUpButton" Style="{DynamicResource RoundSquareButtonStyle2}" Content="Sign Up" Width="100" BorderBrush="Black" Background="#4C2F27" Click="SignUpButton_Click" Foreground="White" BorderThickness="0"/>
+                </WrapPanel>
+                
+                <TextBlock x:Name="HintTextBlock" Height="100" TextWrapping="WrapWithOverflow"/>
+            </StackPanel>
+        </Border>
+       
+    </Grid>
 </Page>

@@ -6,10 +6,11 @@
       xmlns:local="clr-namespace:ShopApp.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AboutPage">
-
-    <StackPanel Margin="200, 50">
-        <Button x:Name="BackButton" Content="Back" Click="BackButton_Click"/>
-        <TextBlock Text="This is the About page." FontSize="24"/>
-    </StackPanel>
+      Title="AboutPage" Background="#755C48">
+    <Border Margin="200,0" Background="#f5f5dc">
+        <StackPanel>
+            <Button x:Name="BackButton" Style="{DynamicResource RoundButtonStyle}" Content="Back" Click="BackButton_Click" Background="#4C2F27" HorizontalAlignment="Left" Height="30" Width="31" Foreground="White" BorderThickness="0"/>
+            <TextBlock Text="This is the About page." FontSize="24"/>
+        </StackPanel>
+    </Border>
 </Page>

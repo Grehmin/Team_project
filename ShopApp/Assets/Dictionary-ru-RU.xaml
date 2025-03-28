@@ -6,6 +6,10 @@
     <system:String x:Key="Page_Authentication_button_SignUp">Регистрация</system:String>
     <system:String x:Key="Page_Authentication_label_Login">Логин</system:String>
     <system:String x:Key="Page_Authentication_label_Password">Пароль</system:String>
+    <system:String x:Key="Page_Authentication_label_Email">Почта</system:String>
+    <system:String x:Key="Page_Authentication_label_Phone">Телефон</system:String>
+    <system:String x:Key="Page_Authentication_ButtonContent_SignIn">Войти</system:String>
+    <system:String x:Key="Page_Authentication_ButtonContent_SignUp">Регистрация</system:String>
     <system:String x:Key="Page_Authentication_Hint_Login_OngoingAction">Аутентификация...</system:String>
     <system:String x:Key="Page_Authentication_Hint_Login_Success">Аутентификация Подтверждена</system:String>
     <system:String x:Key="Page_Authentication_Hint_Register_OngoingAction">Регистрация...</system:String>

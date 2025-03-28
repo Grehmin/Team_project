@@ -6,6 +6,10 @@
     <system:String x:Key="Page_Authentication_button_SignUp">Sign Up</system:String>
     <system:String x:Key="Page_Authentication_label_Login">Login</system:String>
     <system:String x:Key="Page_Authentication_label_Password">Password</system:String>
+    <system:String x:Key="Page_Authentication_label_Email">Email</system:String>
+    <system:String x:Key="Page_Authentication_label_Phone">Phone</system:String>
+    <system:String x:Key="Page_Authentication_ButtonContent_SignIn">Sign In</system:String>
+    <system:String x:Key="Page_Authentication_ButtonContent_SignUp">Sign Up</system:String>
     <system:String x:Key="Page_Authentication_Hint_Login_OngoingAction">Authenticating...</system:String>
     <system:String x:Key="Page_Authentication_Hint_Login_Success">Authentication Successful</system:String>
     <system:String x:Key="Page_Authentication_Hint_Register_OngoingAction">Registering...</system:String>

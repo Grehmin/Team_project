@@ -7,7 +7,7 @@
       xmlns:utils="clr-namespace:ShopApp.Utils"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ItemBrowserPage" Loaded="Page_Loaded">
+      Title="ItemBrowserPage" Loaded="Page_Loaded" Background="#f5f5dc">
 
     <Page.Resources>
         <utils:ImagePathConverter x:Key="ImagePathConverter"/>
@@ -18,8 +18,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" Height="30" Background="#757575">
-            <Grid Margin="10,3,10,3">
+        <Border Grid.Row="0" Height="40" Background="#755C48">
+            <Grid Margin="5,3,5,3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
@@ -27,14 +27,40 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="AboutButton" Grid.Column="0" Content="{DynamicResource Page_ItemBrowser_button_About}" Click="AboutButton_Click" />
-                <Button x:Name="AddNewProductButton" Grid.Column="2" Content="{DynamicResource Page_ItemBrowser_button_NewProduct}" Click="AddNewProductButton_Click" Visibility="Hidden"/>
-                <Button x:Name="CartButton" Grid.Column="3" Content="{DynamicResource Page_ItemBrowser_button_Cart}" Click="CartButton_Click" />
-                <Button x:Name="ProfileButton" Grid.Column="4" Content="{DynamicResource Page_ItemBrowser_button_Profile}" Click="ProfileButton_Click"/>
+                <Button Style="{DynamicResource RoundSquareButtonStyle2}" x:Name="AboutButton" Grid.Column="0" Content="?" 
+                        Click="AboutButton_Click"
+                        Width="37"
+                        Background="#f5f5dc"
+                        BorderThickness="0" 
+                        Foreground="#4C2F27" 
+                        FontSize="18"/>
+                <Button x:Name="AddNewProductButton" Style="{DynamicResource RoundSquareButtonStyle2}" 
+                        Background="#f5f5dc" 
+                        BorderThickness="0" 
+                        Foreground="#4C2F27" 
+                        Grid.Column="2" Margin="5,0,5,0" 
+                        Content="{DynamicResource Page_ItemBrowser_button_NewProduct}" 
+                        Click="AddNewProductButton_Click" 
+                        Visibility="Hidden"/>
+                <Button x:Name="CartButton" Style="{DynamicResource RoundButtonStyle}" Grid.Column="3" 
+                        Content="{DynamicResource Page_ItemBrowser_button_Cart}" 
+                        Click="CartButton_Click" 
+                        MinWidth="36" Margin="5,0,5,0" 
+                        BorderThickness="0" 
+                        Background="#f5f5dc" 
+                        Foreground="#4C2F27"/>
+                <Button x:Name="ProfileButton" Style="{DynamicResource RoundButtonStyle}" Grid.Column="4" 
+                        Content="{DynamicResource Page_ItemBrowser_button_Profile}" 
+                        Click="ProfileButton_Click" 
+                        MinWidth="36" Margin="5,0,5,0" 
+                        BorderThickness="0" 
+                        Background="#f5f5dc" 
+                        Foreground="#4C2F27"/>
             </Grid>
+            
         </Border>
         <!-- Item Display -->
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" Grid.Row="1">
             <ItemsControl x:Name="ProductsItemsControl" Margin="20">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -98,9 +124,10 @@
                                            Margin="0,0,0,10"/>
 
                                 <!-- Add to Cart Button -->
-                                <Button Content="{DynamicResource Page_ItemBrowser_button_AddToCart}" 
+                                <Button Content="{DynamicResource Page_ItemBrowser_button_AddToCart}"
+                                        Style="{DynamicResource RoundSquareButton}"
                                         Padding="10,5"
-                                        Background="#007ACC"
+                                        Background="#4C2F27"
                                         Foreground="White"
                                         BorderThickness="0"
                                         Click="AddToCart_Click"
@@ -111,7 +138,5 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
-
-
     </Grid>
 </Page>

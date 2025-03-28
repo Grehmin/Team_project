@@ -46,7 +46,7 @@ public partial class AuthenticationPage : Page {
         string password = PasswordTextBox.Text;
         var ret = await LoginAsync(login, password);
         if (ret.Success) {
-            HintTextBlock.Text = Paths.GetString("Page_Authentication_Hint_Login_Successful");
+            HintTextBlock.Text = Paths.GetString("Page_Authentication_Hint_Login_Success");
             if (ret.User == null) throw new Exception("User is null after successfull auth");
             mainWindow.Navigate<ItemBrowserPage>(ret.User);
         } else {
@@ -63,7 +63,7 @@ public partial class AuthenticationPage : Page {
         string phone = PhoneTextBox.Text;
         var ret = await RegisterAsync(login, password, email, phone);
         if (ret.Success) {
-            HintTextBlock.Text = Paths.GetString("Page_Authentication_Hint_Register_Successful");
+            HintTextBlock.Text = Paths.GetString("Page_Authentication_Hint_Register_Success");
             if (ret.User == null) throw new Exception("User is null after successfull auth");
             mainWindow.Navigate<ItemBrowserPage>(ret.User);
         } else {

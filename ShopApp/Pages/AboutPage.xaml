@@ -11,16 +11,16 @@
     <!-- Основной контейнер с выравниванием по центру -->
     <Grid>
         <StackPanel Margin="200,50,200,50">
-            <Button x:Name="BackButton" Content="Back" Click="BackButton_Click"/>
+            <Button x:Name="BackButton" Content="{DynamicResource Page_About_button_Back}" Click="BackButton_Click"/>
             <!-- Информация о программе -->
-            <TextBlock Text="О программе:" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" RenderTransformOrigin="0.5,-1.247" HorizontalAlignment="Center"/>
-            <TextBlock Text="ShopApp - это простое приложение, предназначенное для продажи хлебобулочных изделий." 
+            <TextBlock Text="{DynamicResource Page_About_TextBlock_About}" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" RenderTransformOrigin="0.5,-1.247" HorizontalAlignment="Center"/>
+            <TextBlock Text="{DynamicResource Page_About_TextBlock_AboutDescription}" 
                        TextWrapping="Wrap" 
                        HorizontalAlignment="Center" 
                        TextAlignment="Center" 
                        Margin="0,0,0,20"/>
-            <TextBlock Text="Версия: 1.0.0" FontStyle="Italic" HorizontalAlignment="Center" Margin="0,0,0,20"/>
-            <TextBlock Text="Разработчики приложения:" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="{DynamicResource Page_About_TextBlock_Version}" FontStyle="Italic" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            <TextBlock Text="{DynamicResource Page_About_TextBlock_ApplicationDevelopers}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
 
             <!-- Информация о разработчиках -->
             <StackPanel HorizontalAlignment="Center" Margin="0,0,0,20">
@@ -28,7 +28,7 @@
                 <TextBlock Text="Сергей - TeamLead" HorizontalAlignment="Center" Margin="0,0,0,5"/>
                 <TextBlock Text="Даниил - Lead App Developer" HorizontalAlignment="Center" Margin="0,0,0,5"/>
                 <TextBlock Text="Алексей - App Developer, Database Architect" HorizontalAlignment="Center" Margin="0,0,0,5"/>
-                <TextBlock Text="ДОБАВИТЬ ОСТАЛЬНЫХ" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                <TextBlock Text="{DynamicResource Page_About_TextBlock_AddAnother}" HorizontalAlignment="Center" Margin="0,0,0,5"/>
             </StackPanel>
         </StackPanel>
         <!-- Изображение -->

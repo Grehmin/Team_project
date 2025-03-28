@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <!-- Authentication Page Strings -->
+    <system:String x:Key="Page_Authentication_button_SignIn">Войти</system:String>
+    <system:String x:Key="Page_Authentication_button_SignUp">Регистрация</system:String>
+    <system:String x:Key="Page_Authentication_label_Login">Логин</system:String>
+    <system:String x:Key="Page_Authentication_label_Password">Пароль</system:String>
+    <system:String x:Key="Page_Authentication_Hint_Login_OngoingAction">Аутентификация...</system:String>
+    <system:String x:Key="Page_Authentication_Hint_Login_Success">Аутентификация Подтверждена</system:String>
+    <system:String x:Key="Page_Authentication_Hint_Register_OngoingAction">Регистрация...</system:String>
+    <system:String x:Key="Page_Authentication_Hint_Register_Success">Регистрация Подтверждена</system:String>
+    <system:String x:Key="Page_Authentication_Hint_DatabaseIsLate">База данных все еще загружается, попробуйте через пару секунд</system:String>
+    <system:String x:Key="Page_Authentication_Hint_UserExists">Юзернейм или Почта уже зарегестрированны</system:String>
+    <system:String x:Key="Page_Authentication_Hint_UserNotExists">Неправильный Юзернейм или Пароль</system:String>
+    <!-- About Page Strings -->
+    <system:String x:Key="Page_About_button_Back">Назад</system:String>
+    <system:String x:Key="Page_About_TextBlock_About">О программе:</system:String>
+    <system:String x:Key="Page_About_TextBlock_AboutDescription">ShopApp - это простое приложение, предназначенное для продажи хлебобулочных изделий.</system:String>
+    <system:String x:Key="Page_About_TextBlock_Version">Версия: 1.0.0</system:String>
+    <system:String x:Key="Page_About_TextBlock_ApplicationDevelopers">Разработчики приложения:</system:String>
+    <system:String x:Key="Page_About_TextBlock_AddAnother">ДОБАВИТЬ ОСТАЛЬНЫХ</system:String>
+    <!-- Cart Page Strings -->
+    <system:String x:Key="Page_Cart_button_ItemBrowser">Ассортимент</system:String>
+    <system:String x:Key="Page_Cart_button_Profile">Профиль</system:String>
+    <system:String x:Key="Page_Cart_Column_Product">Товар</system:String>
+    <system:String x:Key="Page_Cart_Column_Price">Цена</system:String>
+    <system:String x:Key="Page_Cart_Column_Quantity">Количество</system:String>
+    <!-- Item Browser Page Strings -->
+    <system:String x:Key="Page_ItemBrowser_button_About">О программе</system:String>
+    <system:String x:Key="Page_ItemBrowser_button_Cart">Корзина</system:String>
+    <system:String x:Key="Page_ItemBrowser_button_Profile">Профиль</system:String>
+    <system:String x:Key="Page_ItemBrowser_button_NewProduct">Новая продукция (Admin)</system:String>
+    <system:String x:Key="Page_ItemBrowser_button_AddToCart">Добавить в корзину</system:String>
+    <!-- Order History Page Strings -->
+    <system:String x:Key="Page_OrderHistory_button_Profile">Профиль</system:String>
+    <system:String x:Key="Page_OrderHistory_button_OrderDetails">Детали заказа</system:String>
+    <system:String x:Key="Page_OrderHistory_TextBlock_OrderHistory">История заказов</system:String>
+    <!-- Product Editor Page Strings -->
+    <system:String x:Key="Page_ProductEditor_button_Browse">Проводник...</system:String>
+    <system:String x:Key="Page_ProductEditor_button_Save">Сохранить</system:String>
+    <system:String x:Key="Page_ProductEditor_button_Cancel">Выйти</system:String>
+    <system:String x:Key="Page_ProductEditor_TextBlock_ProductName">Название товара:</system:String>
+    <system:String x:Key="Page_ProductEditor_TextBlock_Description">Описание:</system:String>
+    <system:String x:Key="Page_ProductEditor_TextBlock_Price">Цена:</system:String>
+    <system:String x:Key="Page_ProductEditor_TextBlock_Quantity">Количество:</system:String>
+    <system:String x:Key="Page_ProductEditor_TextBlock_ImagePath">Полный путь до картинки:</system:String>
+    <!-- Profile Page Strings -->
+    <system:String x:Key="Page_Profile_button_BackToItemBrowser">Вернуться к ассортименту</system:String>
+    <system:String x:Key="Page_Profile_button_OrderHistory">История заказов</system:String>
+    <system:String x:Key="Page_Profile_button_Edit">Редактировать</system:String>
+    <system:String x:Key="Page_Profile_TextBlock_Account">Аккаунт</system:String>
+    <system:String x:Key="Page_Profile_TextBlock_Phone">Телефон:</system:String>
+    <system:String x:Key="Page_Profile_TextBlock_Address">Адрес:</system:String>
+    <system:String x:Key="Page_Profile_TextBlock_DateOfRegistration">Дата регистрации:</system:String>
+
+</ResourceDictionary>

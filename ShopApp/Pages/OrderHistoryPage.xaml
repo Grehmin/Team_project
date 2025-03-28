@@ -22,7 +22,7 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Text="История заказов" 
+            <TextBlock Text="{DynamicResource Page_OrderHistory_TextBlock_OrderHistory}" 
                        FontSize="24" 
                        FontWeight="Bold"
                        VerticalAlignment="Center"/>
@@ -30,7 +30,7 @@
             <!-- Кнопка "Профиль" -->
             <Button Grid.Column="1"
                     x:Name="ProfileButton" 
-                    Content="Профиль"
+                    Content="{DynamicResource Page_OrderHistory_button_Profile}"
                     MinWidth="120"
                     Padding="10,5"
                     FontWeight="SemiBold"
@@ -39,7 +39,7 @@
 
             <!-- Кнопка "Детали заказа" -->
             <Button Grid.Column="2"
-                    Content="Детали заказа"
+                    Content="{DynamicResource Page_OrderHistory_button_OrderDetails}"
                     MinWidth="120"
                     Padding="10,5"                   
                     FontWeight="SemiBold"

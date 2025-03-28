@@ -31,8 +31,8 @@
                 <TextBox Style="{StaticResource RoundTextBoxStyle}" x:Name="PhoneTextBox"  Visibility="Collapsed"/>
                 <!--Buttons-->
                 <WrapPanel Margin="15">
-                    <Button x:Name="SignInButton" Style="{DynamicResource RoundSquareButtonStyle2}" Margin="25,0,15,0" BorderBrush="Black" Background="#4C2F27" Width="100" Height="27" Content="Sign In" Click="SignInButton_Click" Foreground="White" BorderThickness="0"/>
-                    <Button x:Name="SignUpButton" Style="{DynamicResource RoundSquareButtonStyle2}" Content="Sign Up" Width="100" BorderBrush="Black" Background="#4C2F27" Click="SignUpButton_Click" Foreground="White" BorderThickness="0"/>
+                    <Button x:Name="SignInButton" Style="{DynamicResource RoundSquareButtonStyle2}" Content="{DynamicResource Page_Authentication_button_SignIn}"  Margin="25,0,15,0" BorderBrush="Black" Background="#4C2F27" Width="100" Height="27" Click="SignInButton_Click" Foreground="White" BorderThickness="0"/>
+                    <Button x:Name="SignUpButton" Style="{DynamicResource RoundSquareButtonStyle2}" Content="{DynamicResource Page_Authentication_button_SignUp}" Width="100" BorderBrush="Black" Background="#4C2F27" Click="SignUpButton_Click" Foreground="White" BorderThickness="0"/>
                 </WrapPanel>
                 
                 <Grid Margin="5" MaxWidth="100" VerticalAlignment="Bottom" Height="100" >                

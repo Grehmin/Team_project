@@ -25,9 +25,9 @@
                 <TextBox Style="{DynamicResource RoundTextBoxStyle}" x:Name="LoginTextBox" Margin="5,0,5,0" BorderBrush="Black"/>
                 <Label x:Name="PasswordLabel"  Content="{DynamicResource Page_Authentication_label_Password}" FontSize="16"/>
                 <TextBox Style="{DynamicResource RoundTextBoxStyle}" x:Name="PasswordTextBox" Margin="5,0,5,0" BorderBrush="Black"/>
-                <Label x:Name="EmailLabel"  Content="Email" FontSize="16" Visibility="Collapsed"/>
+                <Label x:Name="EmailLabel"  Content="{DynamicResource Page_Authentication_label_Email}" FontSize="16" Visibility="Collapsed"/>
                 <TextBox Style="{StaticResource RoundTextBoxStyle}" x:Name="EmailTextBox" Visibility="Collapsed" />
-                <Label  x:Name="PhoneLabel"  Content="Phone" FontSize="16" Visibility="Collapsed"/>
+                <Label  x:Name="PhoneLabel"  Content="{DynamicResource Page_Authentication_label_Phone}" FontSize="16" Visibility="Collapsed"/>
                 <TextBox Style="{StaticResource RoundTextBoxStyle}" x:Name="PhoneTextBox"  Visibility="Collapsed"/>
                 <!--Buttons-->
                 <WrapPanel Margin="15">
